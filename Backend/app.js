@@ -12,7 +12,13 @@ import cors from 'cors'
 // })
 app.use(express.json())
 app.use(urlencoded({extended:true}))
-app.use(cors())
+app.use(cors(
+    {
+        origin:['http://localhost:5173'],
+        // methods:["GET"],
+        credentials:true,
+    }
+))
 
 app.get('/' , (req,res)=>{
     res.send("HELLO")

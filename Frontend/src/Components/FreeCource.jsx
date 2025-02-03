@@ -8,7 +8,7 @@ function FreeCource() {
     
   const handleData = async ()=>{
        try{
-            const courceData = await axios.get('http://localhost:4001/book')
+            const courceData = await axios.get('https://free-cources-1.onrender.com/book')
             // console.log(courceData.data)
             const findData = courceData.data
             const filterData = findData.filter((item) => item.category === "normal")
