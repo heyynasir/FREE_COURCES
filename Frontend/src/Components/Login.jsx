@@ -13,7 +13,7 @@ function Login() {
         e.preventDefault();
         try{
           console.log(email , password)
-          const log = await axios.post('https://free-cources-1.onrender.com/login' , {email , password})
+          const log = await axios.post('https://free-cources-1.onrender.com/user/login' , {email , password})
           // alert("Logged in Successfully")
           toast.success("Logged in Successfully")
           setEmail("")
