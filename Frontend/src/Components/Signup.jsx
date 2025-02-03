@@ -14,7 +14,7 @@ function Signup() {
         e.preventDefault();
         try{
           console.log(fullname , email , password )
-          const getData = await axios.post('http://localhost:4001/user/signup' , {fullname ,email , password})
+          const getData = await axios.post('https://free-cources-1.onrender.com/signup' , {fullname ,email , password})
           setName("")
           setEmail("")
           setPassword("")
