@@ -16,9 +16,10 @@ function Logout() {
             })
             localStorage.removeItem("User")
             toast.success("Logout Successfully")
-            navigate('/signup')
+            
             setTimeout(()=>{
-                window.location.reload()
+                // window.location.reload()
+                navigate('/signup')
             },1000)
         }catch(err){
             // console.log(err)
