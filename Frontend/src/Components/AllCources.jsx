@@ -7,7 +7,7 @@ function AllCources({item , index}) {
 
   const getBooks = async ()=>{
       try{
-        const data = await axios.get('https://coding-nations.vercel.app/book')
+        const data = await axios.get('http://localhost:4001/book')
         // console.log(data.data)
         setBook(data.data)
       }catch(err){

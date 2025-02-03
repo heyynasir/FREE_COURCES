@@ -13,7 +13,7 @@ function Login() {
         e.preventDefault();
         try{
           console.log(email , password)
-          const log = await axios.post('https://coding-nations.vercel.app/user/login' , {email , password})
+          const log = await axios.post('http://localhost:4001/user/login' , {email , password})
           // alert("Logged in Successfully")
           toast.success("Logged in Successfully")
           setEmail("")
