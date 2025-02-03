@@ -1,8 +1,10 @@
 import React from 'react'
 import { useAuth } from '../Context/AuthProvider'
 import toast from 'react-hot-toast'
+import { useNavigate } from 'react-router-dom'
 
 function Logout() {
+    const navigate = useNavigate()
 
     const [authUser , setAuthUser] = useAuth()
 
@@ -14,7 +16,7 @@ function Logout() {
             })
             localStorage.removeItem("User")
             toast.success("Logout Successfully")
-            
+            navigate('/signup')
             setTimeout(()=>{
                 window.location.reload()
             },1000)
